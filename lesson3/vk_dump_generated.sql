@@ -1,0 +1,599 @@
+-- MariaDB dump 10.17  Distrib 10.4.15-MariaDB, for Linux (x86_64)
+--
+-- Host: mysql.hostinger.ro    Database: u574849695_25
+-- ------------------------------------------------------
+-- Server version	10.4.15-MariaDB-cll-lve
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `cities`
+--
+
+DROP TABLE IF EXISTS `cities`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `cities` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(150) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `country_id` int(10) unsigned DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=101 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `cities`
+--
+
+LOCK TABLES `cities` WRITE;
+/*!40000 ALTER TABLE `cities` DISABLE KEYS */;
+INSERT INTO `cities` VALUES (1,'quia',1),(2,'animi',2),(3,'eum',3),(4,'a',4),(5,'debitis',5),(6,'quas',6),(7,'voluptatum',7),(8,'et',8),(9,'perspiciatis',9),(10,'quos',10),(11,'officiis',11),(12,'minus',12),(13,'ipsum',13),(14,'impedit',14),(15,'aut',15),(16,'ullam',16),(17,'autem',17),(18,'recusandae',18),(19,'quis',19),(20,'libero',20),(21,'ipsum',21),(22,'possimus',22),(23,'recusandae',23),(24,'sint',24),(25,'quasi',25),(26,'architecto',26),(27,'ratione',27),(28,'expedita',28),(29,'aspernatur',29),(30,'est',30),(31,'labore',31),(32,'in',32),(33,'tempore',33),(34,'ut',34),(35,'perspiciatis',35),(36,'possimus',36),(37,'voluptatum',37),(38,'voluptatum',38),(39,'nostrum',39),(40,'non',40),(41,'delectus',41),(42,'autem',42),(43,'mollitia',43),(44,'laudantium',44),(45,'eum',45),(46,'molestias',46),(47,'voluptate',47),(48,'voluptates',48),(49,'ut',49),(50,'excepturi',50),(51,'ipsum',51),(52,'perferendis',52),(53,'eos',53),(54,'mollitia',54),(55,'tenetur',55),(56,'sit',56),(57,'nam',57),(58,'itaque',58),(59,'at',59),(60,'et',60),(61,'et',61),(62,'voluptatum',62),(63,'repudiandae',63),(64,'qui',64),(65,'necessitatibus',65),(66,'accusamus',66),(67,'aperiam',67),(68,'commodi',68),(69,'repellendus',69),(70,'et',70),(71,'dolorum',71),(72,'vel',72),(73,'quia',73),(74,'doloribus',74),(75,'neque',75),(76,'ea',76),(77,'corporis',77),(78,'repudiandae',78),(79,'cupiditate',79),(80,'incidunt',80),(81,'amet',81),(82,'ratione',82),(83,'excepturi',83),(84,'quo',84),(85,'fugiat',85),(86,'incidunt',86),(87,'eligendi',87),(88,'quia',88),(89,'et',89),(90,'consectetur',90),(91,'non',91),(92,'inventore',92),(93,'nam',93),(94,'eveniet',94),(95,'odit',95),(96,'nisi',96),(97,'voluptatibus',97),(98,'maxime',98),(99,'perferendis',99),(100,'aut',100);
+/*!40000 ALTER TABLE `cities` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2021-07-12  9:40:04
+-- MariaDB dump 10.17  Distrib 10.4.15-MariaDB, for Linux (x86_64)
+--
+-- Host: mysql.hostinger.ro    Database: u574849695_25
+-- ------------------------------------------------------
+-- Server version	10.4.15-MariaDB-cll-lve
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `communities`
+--
+
+DROP TABLE IF EXISTS `communities`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `communities` (
+  `communitiesid` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Идентификатор сроки',
+  `communitiesname` varchar(150) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'Название группы',
+  `communitiescreated_at` datetime DEFAULT current_timestamp() COMMENT 'Время создания строки',
+  `communitiesupdated_at` datetime DEFAULT current_timestamp() ON UPDATE current_timestamp() COMMENT 'Время обновления строки',
+  PRIMARY KEY (`communitiesid`),
+  UNIQUE KEY `communitiesname` (`communitiesname`)
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Группы';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `communities`
+--
+
+LOCK TABLES `communities` WRITE;
+/*!40000 ALTER TABLE `communities` DISABLE KEYS */;
+INSERT INTO `communities` VALUES (1,'et','2005-01-28 14:00:59','1992-02-22 13:17:18'),(2,'repudiandae','1996-05-29 19:47:11','2015-03-17 19:33:38'),(3,'ab','2011-12-06 14:57:56','1991-03-08 07:34:10'),(4,'sequi','2003-02-23 09:04:49','2018-03-05 17:28:25'),(5,'est','2010-08-06 22:19:14','1998-08-31 23:34:02'),(6,'tenetur','1995-12-07 06:19:29','1994-08-06 22:37:16'),(7,'quia','2012-11-13 13:34:56','1982-01-30 23:00:30'),(8,'molestias','1997-10-07 09:48:50','1970-11-25 19:28:19'),(9,'consequatur','2013-02-04 23:41:06','2003-02-28 03:39:05'),(10,'praesentium','2014-02-28 00:09:44','2014-09-05 15:59:57'),(11,'autem','1997-12-19 20:22:38','2006-05-03 03:04:14'),(12,'dolores','2002-08-21 21:16:04','1983-01-07 17:52:59'),(13,'molestiae','1992-05-23 04:46:41','1971-09-29 09:38:43'),(14,'fugit','1974-06-21 12:13:19','1994-05-25 12:00:03'),(15,'aspernatur','1981-03-22 16:31:23','1986-09-28 11:01:12'),(16,'velit','1979-10-25 17:51:54','2014-01-24 12:30:28'),(17,'omnis','1970-09-21 12:08:40','1985-11-10 18:18:49'),(18,'maxime','1970-03-20 23:09:48','1998-09-27 19:46:15'),(19,'atque','1992-04-23 00:33:49','2014-03-20 22:42:34'),(20,'sunt','2007-10-30 08:44:11','1976-04-29 19:26:32');
+/*!40000 ALTER TABLE `communities` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2021-07-12  9:43:05
+-- MariaDB dump 10.17  Distrib 10.4.15-MariaDB, for Linux (x86_64)
+--
+-- Host: mysql.hostinger.ro    Database: u574849695_25
+-- ------------------------------------------------------
+-- Server version	10.4.15-MariaDB-cll-lve
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `communities_users`
+--
+
+DROP TABLE IF EXISTS `communities_users`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `communities_users` (
+  `community_id` int(10) unsigned NOT NULL COMMENT 'Ссылка на группу',
+  `user_id` int(10) unsigned NOT NULL COMMENT 'Ссылка на пользователя',
+  `created_at` datetime DEFAULT current_timestamp() COMMENT 'Время создания строки',
+  PRIMARY KEY (`community_id`,`user_id`) COMMENT 'Составной первичный ключ'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Участники групп, связь между пользователями и группами';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `communities_users`
+--
+
+LOCK TABLES `communities_users` WRITE;
+/*!40000 ALTER TABLE `communities_users` DISABLE KEYS */;
+INSERT INTO `communities_users` VALUES (1,1,'1991-03-23 05:13:37'),(1,21,'1995-07-10 16:57:53'),(1,41,'2002-11-16 09:00:25'),(1,61,'1992-10-15 09:40:26'),(1,81,'2018-07-03 11:32:02'),(2,2,'1993-05-09 08:27:04'),(2,22,'1972-09-06 11:18:52'),(2,42,'1995-12-01 17:49:44'),(2,62,'2000-12-09 06:08:01'),(2,82,'2015-12-04 11:10:55'),(3,3,'1982-06-28 14:56:51'),(3,23,'1989-06-17 23:07:46'),(3,43,'1999-09-25 20:03:11'),(3,63,'1980-04-22 19:04:57'),(3,83,'1980-02-25 04:44:33'),(4,4,'1991-01-31 08:31:39'),(4,24,'2004-08-02 04:29:52'),(4,44,'1985-07-01 07:16:46'),(4,64,'1979-12-21 07:01:05'),(4,84,'1999-07-22 16:20:53'),(5,5,'1971-02-04 05:00:41'),(5,25,'1985-01-05 07:36:31'),(5,45,'2010-08-30 21:48:07'),(5,65,'2000-08-27 02:40:22'),(5,85,'1977-08-31 21:51:22'),(6,6,'1985-01-07 00:32:59'),(6,26,'1980-06-06 01:03:55'),(6,46,'1972-12-05 22:18:10'),(6,66,'2012-12-25 13:19:45'),(6,86,'1980-02-17 17:51:52'),(7,7,'2006-11-16 04:12:52'),(7,27,'1989-06-19 10:26:29'),(7,47,'1999-08-20 07:05:29'),(7,67,'1978-12-27 14:21:59'),(7,87,'2000-09-04 18:30:59'),(8,8,'1984-08-24 19:51:17'),(8,28,'2013-01-09 08:03:23'),(8,48,'1995-10-17 12:28:23'),(8,68,'2011-01-23 16:40:28'),(8,88,'1982-01-14 19:22:56'),(9,9,'1996-01-09 07:24:53'),(9,29,'1972-12-03 15:49:20'),(9,49,'1987-04-19 11:31:50'),(9,69,'1980-09-22 04:28:07'),(9,89,'2013-03-18 01:47:17'),(10,10,'1989-09-24 09:36:27'),(10,30,'1991-06-04 13:15:10'),(10,50,'1998-07-22 16:50:54'),(10,70,'1971-04-17 17:33:24'),(10,90,'1997-10-13 04:07:03'),(11,11,'1979-09-30 04:04:48'),(11,31,'2001-01-17 17:28:54'),(11,51,'1996-03-14 16:06:42'),(11,71,'1974-01-30 04:46:53'),(11,91,'1972-08-26 17:08:32'),(12,12,'2001-09-17 16:51:20'),(12,32,'1995-09-14 13:24:51'),(12,52,'1993-06-13 07:45:53'),(12,72,'1994-12-10 18:24:03'),(12,92,'2004-06-07 05:30:16'),(13,13,'2008-12-07 08:14:35'),(13,33,'2001-04-04 17:00:54'),(13,53,'2018-08-16 17:00:28'),(13,73,'1974-12-07 08:23:17'),(13,93,'1982-10-10 03:32:09'),(14,14,'1980-03-11 23:29:16'),(14,34,'2010-12-02 13:53:52'),(14,54,'1977-03-24 10:15:09'),(14,74,'1992-02-08 18:20:03'),(14,94,'1983-09-28 07:51:44'),(15,15,'1985-04-18 17:34:06'),(15,35,'2010-05-13 11:24:00'),(15,55,'1988-07-04 22:18:27'),(15,75,'2021-06-18 22:00:41'),(15,95,'2003-03-13 03:36:51'),(16,16,'1987-04-24 14:59:07'),(16,36,'1987-02-06 21:44:20'),(16,56,'2002-04-11 21:10:42'),(16,76,'1971-08-15 02:00:07'),(16,96,'1983-02-10 08:16:31'),(17,17,'1971-08-13 20:41:38'),(17,37,'1981-12-01 07:34:53'),(17,57,'1979-11-09 12:40:48'),(17,77,'1996-03-19 04:14:18'),(17,97,'1973-05-09 08:47:25'),(18,18,'1980-08-30 02:42:19'),(18,38,'2020-03-06 02:48:29'),(18,58,'1980-02-05 02:46:18'),(18,78,'1983-07-12 02:18:24'),(18,98,'2013-08-11 03:10:46'),(19,19,'1998-05-26 15:21:40'),(19,39,'1999-06-18 05:01:58'),(19,59,'1970-04-22 23:41:48'),(19,79,'2017-09-15 03:53:27'),(19,99,'1974-11-14 01:03:02'),(20,20,'1991-10-21 22:46:44'),(20,40,'2015-04-27 19:26:52'),(20,60,'1993-01-11 10:17:18'),(20,80,'2001-07-12 02:36:09'),(20,100,'2004-06-18 13:19:43');
+/*!40000 ALTER TABLE `communities_users` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2021-07-12  9:45:10
+-- MariaDB dump 10.17  Distrib 10.4.15-MariaDB, for Linux (x86_64)
+--
+-- Host: mysql.hostinger.ro    Database: u574849695_25
+-- ------------------------------------------------------
+-- Server version	10.4.15-MariaDB-cll-lve
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `countries`
+--
+
+DROP TABLE IF EXISTS `countries`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `countries` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(150) COLLATE utf8mb4_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=101 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `countries`
+--
+
+LOCK TABLES `countries` WRITE;
+/*!40000 ALTER TABLE `countries` DISABLE KEYS */;
+INSERT INTO `countries` VALUES (1,'magni'),(2,'ab'),(3,'nostrum'),(4,'quia'),(5,'possimus'),(6,'iusto'),(7,'repudiandae'),(8,'tempora'),(9,'libero'),(10,'cupiditate'),(11,'harum'),(12,'voluptatem'),(13,'qui'),(14,'quod'),(15,'qui'),(16,'eos'),(17,'animi'),(18,'et'),(19,'pariatur'),(20,'excepturi'),(21,'voluptatem'),(22,'cum'),(23,'fugiat'),(24,'totam'),(25,'id'),(26,'occaecati'),(27,'voluptas'),(28,'sequi'),(29,'impedit'),(30,'error'),(31,'reprehenderit'),(32,'temporibus'),(33,'aut'),(34,'cumque'),(35,'maiores'),(36,'dolor'),(37,'pariatur'),(38,'rerum'),(39,'est'),(40,'temporibus'),(41,'cum'),(42,'rem'),(43,'aut'),(44,'voluptatum'),(45,'reiciendis'),(46,'quas'),(47,'quam'),(48,'atque'),(49,'assumenda'),(50,'numquam'),(51,'et'),(52,'sint'),(53,'deserunt'),(54,'ut'),(55,'unde'),(56,'praesentium'),(57,'eos'),(58,'numquam'),(59,'minus'),(60,'temporibus'),(61,'soluta'),(62,'nihil'),(63,'animi'),(64,'quia'),(65,'omnis'),(66,'ducimus'),(67,'qui'),(68,'officia'),(69,'nemo'),(70,'dolorum'),(71,'nihil'),(72,'dolor'),(73,'ullam'),(74,'qui'),(75,'nobis'),(76,'praesentium'),(77,'et'),(78,'ut'),(79,'consequatur'),(80,'autem'),(81,'sint'),(82,'enim'),(83,'soluta'),(84,'at'),(85,'odit'),(86,'dolores'),(87,'officia'),(88,'voluptatum'),(89,'voluptates'),(90,'vel'),(91,'aliquam'),(92,'rerum'),(93,'unde'),(94,'dolor'),(95,'omnis'),(96,'vero'),(97,'animi'),(98,'eligendi'),(99,'ut'),(100,'perspiciatis');
+/*!40000 ALTER TABLE `countries` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2021-07-12  9:39:44
+-- MariaDB dump 10.17  Distrib 10.4.15-MariaDB, for Linux (x86_64)
+--
+-- Host: mysql.hostinger.ro    Database: u574849695_25
+-- ------------------------------------------------------
+-- Server version	10.4.15-MariaDB-cll-lve
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `friendship`
+--
+
+DROP TABLE IF EXISTS `friendship`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `friendship` (
+  `user_id` int(10) unsigned NOT NULL COMMENT 'Ссылка на инициатора дружеских отношений',
+  `friend_id` int(10) unsigned NOT NULL COMMENT 'Ссылка на получателя приглашения дружить',
+  `friendship_status_id` int(10) unsigned NOT NULL COMMENT 'Ссылка на статус (текущее состояние) отношений',
+  `confirmed_at` datetime DEFAULT NULL COMMENT 'Время подтверждения приглашения',
+  `created_at` datetime DEFAULT current_timestamp() COMMENT 'Время создания строки',
+  `updated_at` datetime DEFAULT current_timestamp() ON UPDATE current_timestamp() COMMENT 'Время обновления строки',
+  PRIMARY KEY (`user_id`,`friend_id`) COMMENT 'Составной первичный ключ'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Таблица дружбы';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `friendship`
+--
+
+LOCK TABLES `friendship` WRITE;
+/*!40000 ALTER TABLE `friendship` DISABLE KEYS */;
+INSERT INTO `friendship` VALUES (1,1,1,'1994-04-10 04:14:01','2019-11-25 17:25:35','2018-03-13 14:00:18'),(2,2,2,'1999-05-29 14:46:17','1977-09-14 04:47:56','1978-07-08 13:35:36'),(3,3,3,'1981-03-01 02:23:40','1979-04-08 10:31:19','1993-12-07 21:08:39'),(4,4,4,'2006-04-19 20:26:44','2007-11-17 05:20:52','1990-01-13 12:23:44'),(5,5,5,'1980-03-09 12:08:49','2004-06-25 13:47:48','2013-09-21 02:01:52'),(6,6,6,'2000-05-03 20:38:01','1974-11-18 00:32:32','1993-02-13 17:40:18'),(7,7,7,'1996-07-29 13:17:50','2012-11-17 23:12:51','1992-06-27 23:57:00'),(8,8,8,'1970-08-03 16:35:43','1985-06-08 18:31:54','1998-10-21 05:31:09'),(9,9,9,'1984-10-15 21:05:46','1975-09-08 12:41:02','1977-05-30 06:39:45'),(10,10,10,'2012-11-19 18:36:36','1998-11-16 03:10:17','1981-11-16 09:46:31'),(11,11,11,'1971-09-13 03:25:25','2000-10-13 17:17:35','2019-11-09 10:44:49'),(12,12,12,'2020-07-31 13:28:10','2012-07-15 14:47:25','1979-06-09 10:29:00'),(13,13,13,'1980-12-06 00:23:55','2009-07-28 16:07:54','1986-09-26 09:39:22'),(14,14,14,'1989-06-14 01:42:04','1976-07-26 20:23:23','2000-07-15 02:56:25'),(15,15,15,'1982-09-03 17:44:40','1981-10-04 07:04:13','2003-07-21 03:08:03'),(16,16,16,'1972-02-02 21:13:33','2018-12-15 07:35:31','2004-02-02 01:36:17'),(17,17,17,'1979-09-08 04:27:51','1988-07-10 21:10:48','2003-10-26 13:54:55'),(18,18,18,'1993-04-05 07:45:15','2000-05-25 06:10:01','2010-10-17 01:20:19'),(19,19,19,'1974-10-30 12:20:15','2020-05-01 19:58:41','2002-07-24 11:58:51'),(20,20,20,'1978-01-18 15:20:32','1990-02-17 07:09:56','2021-03-12 17:48:24'),(21,21,1,'2005-05-25 20:27:55','1985-11-24 23:20:56','2014-09-07 05:19:45'),(22,22,2,'1975-05-18 01:07:05','1975-03-14 06:43:40','2015-12-06 06:59:55'),(23,23,3,'1989-04-16 18:41:21','2011-09-12 10:30:27','2014-10-23 11:24:43'),(24,24,4,'1981-11-10 04:38:28','1970-03-24 02:57:54','1974-06-02 15:25:24'),(25,25,5,'2006-07-28 10:58:19','1987-06-10 12:00:23','1974-06-22 10:08:53'),(26,26,6,'2013-03-06 10:13:46','1985-08-08 23:08:07','1983-11-02 05:24:56'),(27,27,7,'1998-07-29 15:20:42','1985-09-14 02:09:21','1973-12-26 21:16:43'),(28,28,8,'2014-08-22 15:32:06','1979-01-12 18:03:16','1979-09-10 18:38:41'),(29,29,9,'2017-01-01 23:40:59','2003-02-21 21:07:30','2020-09-20 08:56:48'),(30,30,10,'1979-10-06 17:22:44','1980-08-11 04:59:02','2012-02-07 15:10:00'),(31,31,11,'1991-08-12 08:57:18','2008-10-10 16:45:11','2001-10-05 10:03:28'),(32,32,12,'2013-10-05 07:03:56','1992-06-09 16:14:27','2017-02-25 18:50:20'),(33,33,13,'1971-05-31 16:31:42','2020-03-10 20:33:50','1994-09-18 10:32:33'),(34,34,14,'2018-12-04 09:46:05','1981-06-24 18:16:04','1997-05-06 09:49:28'),(35,35,15,'2010-10-04 12:50:06','2002-09-21 15:17:43','2013-02-23 22:30:18'),(36,36,16,'1975-01-19 05:43:57','1977-08-30 11:20:11','1981-09-15 07:00:55'),(37,37,17,'2020-01-18 07:39:53','2015-02-18 16:52:56','2002-08-12 16:58:35'),(38,38,18,'1992-04-21 07:37:33','1980-02-18 05:27:14','1984-11-05 01:36:29'),(39,39,19,'1975-10-24 17:07:43','1986-02-15 20:08:34','2012-11-07 07:52:50'),(40,40,20,'1995-04-05 17:39:16','1982-08-08 01:07:15','2011-08-26 19:10:54'),(41,41,1,'2017-08-01 06:03:10','1975-07-22 10:22:54','1977-06-26 07:51:50'),(42,42,2,'1998-08-28 22:28:51','2018-05-11 02:46:37','2017-08-23 02:14:18'),(43,43,3,'2019-07-11 21:20:43','1971-09-13 14:35:12','1989-05-06 09:45:38'),(44,44,4,'1984-06-26 05:59:15','1985-06-26 00:14:09','1998-08-31 17:19:37'),(45,45,5,'2017-11-21 11:43:37','2016-09-20 02:01:01','1987-09-05 13:22:51'),(46,46,6,'2020-04-21 14:48:13','1979-08-05 21:46:29','2008-03-15 14:21:41'),(47,47,7,'2016-08-19 07:02:07','2016-01-05 20:58:39','1982-03-23 09:03:51'),(48,48,8,'2014-08-31 20:40:09','1978-02-04 09:48:24','2014-09-18 05:12:01'),(49,49,9,'1996-09-10 06:48:12','1979-03-02 18:28:43','2017-09-07 03:46:19'),(50,50,10,'1990-11-25 12:37:07','2006-06-21 18:42:02','1987-10-24 05:23:33'),(51,51,11,'2018-09-29 07:38:29','1987-05-03 09:50:27','1970-12-15 16:28:09'),(52,52,12,'2001-08-07 01:02:57','1988-11-24 09:09:03','2011-11-16 18:41:15'),(53,53,13,'1972-08-31 04:40:44','1979-11-22 22:25:29','1987-06-16 12:43:28'),(54,54,14,'2007-05-01 17:57:47','2016-12-25 23:10:02','2008-02-01 18:27:36'),(55,55,15,'2013-07-16 07:02:00','1982-09-21 22:20:32','1978-05-19 21:44:47'),(56,56,16,'1990-04-29 21:11:48','1978-05-08 22:51:22','1973-09-21 00:46:55'),(57,57,17,'1973-07-06 17:53:27','2015-03-06 07:03:49','1985-07-08 18:52:09'),(58,58,18,'2006-03-04 23:30:33','1979-05-16 03:47:19','2012-10-06 09:54:01'),(59,59,19,'1970-07-22 22:35:10','2018-11-28 05:41:30','1978-07-14 03:52:09'),(60,60,20,'2015-02-04 06:51:59','1975-06-07 07:52:14','2020-09-04 18:50:20'),(61,61,1,'2014-11-05 16:10:28','2009-02-17 02:11:08','2017-01-04 19:41:09'),(62,62,2,'2019-03-23 01:53:56','1997-08-02 21:47:06','1980-10-02 07:42:16'),(63,63,3,'1979-08-13 13:30:31','2002-08-14 20:30:50','1982-07-06 18:11:57'),(64,64,4,'1978-10-01 23:30:08','1974-10-02 06:25:09','2002-08-03 06:01:58'),(65,65,5,'1984-09-27 06:24:03','1985-07-08 04:49:33','1977-02-22 05:36:27'),(66,66,6,'2019-02-17 17:50:34','2012-12-13 23:44:20','1973-10-02 11:14:40'),(67,67,7,'2009-08-20 09:18:11','2019-08-26 19:51:32','2004-09-01 00:11:16'),(68,68,8,'1984-08-30 05:14:11','1970-07-20 12:36:11','1978-01-12 03:34:53'),(69,69,9,'1981-07-23 16:21:33','1995-12-13 18:18:31','2017-01-14 10:29:32'),(70,70,10,'1998-11-11 17:03:06','2008-10-13 21:51:31','1982-03-06 17:31:04'),(71,71,11,'1982-01-04 08:47:57','2001-09-07 19:10:51','1995-05-27 15:26:11'),(72,72,12,'2016-09-17 10:15:28','1977-06-23 17:52:11','1998-02-04 20:53:48'),(73,73,13,'1999-05-31 00:53:39','2011-04-03 18:11:52','2015-02-06 14:34:19'),(74,74,14,'2002-01-31 21:43:35','1995-07-10 23:55:58','1976-04-15 11:31:02'),(75,75,15,'1986-08-18 07:40:23','2000-06-19 04:45:37','2019-02-15 14:51:15'),(76,76,16,'1976-03-11 17:01:28','1995-09-30 20:53:25','2012-07-17 01:07:27'),(77,77,17,'1979-03-13 01:45:30','2002-06-26 20:33:39','1978-06-28 03:04:14'),(78,78,18,'2017-01-26 13:48:02','1991-08-25 23:42:42','1975-01-23 13:49:23'),(79,79,19,'2009-03-22 05:06:09','2005-05-05 23:59:35','2000-01-23 03:16:27'),(80,80,20,'1985-08-24 15:44:53','1984-03-02 13:03:19','1978-11-05 11:33:49'),(81,81,1,'1984-06-11 09:44:30','1997-04-07 19:44:15','2016-05-15 00:33:03'),(82,82,2,'2016-10-22 15:55:08','2006-05-27 03:38:53','2010-05-26 22:00:51'),(83,83,3,'2016-03-20 02:06:03','2013-01-01 15:55:03','2018-08-22 01:51:49'),(84,84,4,'2015-04-18 15:49:57','1971-09-19 13:51:46','1987-01-26 17:27:56'),(85,85,5,'2011-10-03 23:32:01','2021-06-09 08:11:03','1973-11-22 03:02:31'),(86,86,6,'2000-09-28 00:22:40','2013-12-17 04:41:10','1992-01-26 05:06:32'),(87,87,7,'2014-04-30 03:49:04','2003-01-09 04:31:52','2004-02-13 13:47:49'),(88,88,8,'1974-08-01 04:42:09','1979-11-08 02:14:37','1999-09-22 06:22:09'),(89,89,9,'1974-01-26 23:08:18','1993-03-19 22:46:09','1979-03-10 04:59:29'),(90,90,10,'1999-04-10 13:33:27','2020-11-14 17:40:39','1978-05-29 01:48:03'),(91,91,11,'1997-05-05 01:58:54','2007-02-26 21:30:27','2004-07-17 21:24:47'),(92,92,12,'1975-04-30 09:42:36','1978-09-17 18:30:56','2009-04-11 00:27:33'),(93,93,13,'1989-07-16 04:29:11','1970-01-11 18:14:14','1980-09-22 04:43:17'),(94,94,14,'1991-09-24 17:51:23','1973-02-24 22:07:17','1970-04-22 00:37:41'),(95,95,15,'1993-04-15 02:23:34','1973-06-24 02:56:22','1973-05-10 02:43:53'),(96,96,16,'1977-04-15 18:27:49','1997-09-24 14:44:10','2017-11-13 18:59:10'),(97,97,17,'1978-12-03 01:03:32','2011-03-23 00:09:57','1979-04-12 20:31:58'),(98,98,18,'1975-11-11 16:58:25','1981-10-01 23:14:16','1971-04-04 05:30:01'),(99,99,19,'2018-03-02 22:22:54','1974-08-21 16:44:07','1974-08-14 01:00:04'),(100,100,20,'1971-01-25 10:38:51','1995-09-26 09:01:03','2020-05-23 05:15:50');
+/*!40000 ALTER TABLE `friendship` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2021-07-12  9:44:29
+-- MariaDB dump 10.17  Distrib 10.4.15-MariaDB, for Linux (x86_64)
+--
+-- Host: mysql.hostinger.ro    Database: u574849695_25
+-- ------------------------------------------------------
+-- Server version	10.4.15-MariaDB-cll-lve
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `friendship_statuses`
+--
+
+DROP TABLE IF EXISTS `friendship_statuses`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `friendship_statuses` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Идентификатор строки',
+  `name` varchar(150) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'Название статуса',
+  `created_at` datetime DEFAULT current_timestamp() COMMENT 'Время создания строки',
+  `updated_at` datetime DEFAULT current_timestamp() ON UPDATE current_timestamp() COMMENT 'Время обновления строки',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `name` (`name`)
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Статусы дружбы';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `friendship_statuses`
+--
+
+LOCK TABLES `friendship_statuses` WRITE;
+/*!40000 ALTER TABLE `friendship_statuses` DISABLE KEYS */;
+INSERT INTO `friendship_statuses` VALUES (1,'corporis','1994-07-17 03:28:18','1989-03-14 12:39:53'),(2,'et','1990-07-23 07:12:19','2015-11-28 03:44:20'),(3,'accusamus','1987-01-27 01:49:27','1979-03-27 15:36:27'),(4,'laudantium','2009-05-09 21:38:09','1984-09-26 06:45:47'),(5,'ut','1977-03-06 00:28:33','1975-10-30 04:22:43'),(6,'sed','1991-05-01 15:09:36','1992-05-17 06:54:00'),(7,'ipsa','1977-03-12 21:01:40','1970-03-05 11:10:14'),(8,'facere','1995-03-18 02:04:57','2013-04-27 03:20:34'),(9,'explicabo','2016-06-22 05:35:54','2016-07-29 05:28:05'),(10,'animi','1996-02-12 16:46:48','2000-07-04 17:56:21'),(11,'placeat','1979-07-22 20:49:45','2013-02-06 10:44:35'),(12,'nesciunt','1978-12-16 04:55:13','1974-05-28 14:48:28'),(13,'blanditiis','1987-03-01 05:01:11','1983-06-10 12:04:31'),(14,'ad','1972-04-05 20:49:56','2003-04-06 02:06:06'),(15,'aliquid','1999-04-24 22:22:07','1995-11-18 22:36:04'),(16,'illo','1973-09-24 05:10:21','2007-07-03 17:20:23'),(17,'reiciendis','2010-05-13 02:22:10','1999-04-30 14:15:46'),(18,'consequatur','1997-01-14 23:20:05','2001-09-06 09:01:46'),(19,'hic','2012-04-28 16:35:21','1986-04-01 17:20:00'),(20,'modi','1999-06-28 07:53:51','2007-04-21 05:58:56');
+/*!40000 ALTER TABLE `friendship_statuses` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2021-07-12  9:43:35
+-- MariaDB dump 10.17  Distrib 10.4.15-MariaDB, for Linux (x86_64)
+--
+-- Host: mysql.hostinger.ro    Database: u574849695_25
+-- ------------------------------------------------------
+-- Server version	10.4.15-MariaDB-cll-lve
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `media`
+--
+
+DROP TABLE IF EXISTS `media`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `media` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Идентификатор строки',
+  `user_id` int(10) unsigned NOT NULL COMMENT 'Ссылка на пользователя, который загрузил файл',
+  `filename` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'Путь к файлу',
+  `size` int(11) NOT NULL COMMENT 'Размер файла',
+  `metadata` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL COMMENT 'Метаданные файла' CHECK (json_valid(`metadata`)),
+  `media_type_id` int(10) unsigned NOT NULL COMMENT 'Ссылка на тип контента',
+  `created_at` datetime DEFAULT current_timestamp() COMMENT 'Время создания строки',
+  `updated_at` datetime DEFAULT current_timestamp() ON UPDATE current_timestamp() COMMENT 'Время обновления строки',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=101 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Медиафайлы';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `media`
+--
+
+LOCK TABLES `media` WRITE;
+/*!40000 ALTER TABLE `media` DISABLE KEYS */;
+INSERT INTO `media` VALUES (1,1,'ut',173051,NULL,1,'1999-11-06 20:37:33','1984-07-30 13:03:10'),(2,2,'blanditiis',396663263,NULL,2,'1975-06-27 19:35:23','1975-08-11 18:08:07'),(3,3,'accusantium',244,NULL,3,'1980-03-16 10:10:11','2020-03-15 01:18:33'),(4,4,'odit',404198,NULL,4,'2002-11-26 04:37:11','2007-04-18 06:01:24'),(5,5,'est',12632,NULL,5,'1970-06-04 09:50:28','1997-10-31 16:59:33'),(6,6,'maxime',0,NULL,6,'2015-06-25 07:23:41','1999-10-26 02:54:20'),(7,7,'in',0,NULL,7,'2019-04-13 13:34:34','1999-04-28 17:18:12'),(8,8,'aut',33036806,NULL,8,'2010-03-07 18:43:40','1998-05-28 06:55:10'),(9,9,'saepe',523385,NULL,9,'1979-05-07 18:32:58','1992-02-13 07:52:49'),(10,10,'nulla',9,NULL,10,'1994-05-28 15:27:23','2018-02-07 09:02:57'),(11,11,'nulla',478911963,NULL,11,'1994-06-26 22:17:14','2019-05-01 00:02:54'),(12,12,'sint',52899772,NULL,12,'2001-04-25 20:46:09','2005-03-28 01:21:23'),(13,13,'non',94831,NULL,13,'1994-05-18 02:18:05','2009-12-04 08:20:39'),(14,14,'iste',651958,NULL,14,'1992-03-08 16:00:51','2019-09-26 21:01:29'),(15,15,'ut',547,NULL,15,'1997-06-17 05:03:41','1985-04-25 09:01:59'),(16,16,'rem',86021,NULL,16,'1982-05-25 05:52:08','1994-03-20 17:26:18'),(17,17,'pariatur',0,NULL,17,'1982-01-08 23:07:41','2007-04-21 17:12:48'),(18,18,'in',84,NULL,18,'1973-12-16 03:15:29','2018-11-06 23:51:55'),(19,19,'doloremque',64,NULL,19,'2021-05-20 23:00:21','1999-10-09 15:59:53'),(20,20,'nisi',2349704,NULL,20,'2014-04-08 05:34:01','1977-08-14 16:09:53'),(21,21,'totam',471728079,NULL,21,'1992-09-20 01:53:31','2016-01-15 16:38:19'),(22,22,'iusto',76468192,NULL,22,'1986-05-19 04:09:15','1986-12-10 19:38:14'),(23,23,'laboriosam',64605,NULL,23,'1993-07-22 22:06:56','1993-12-13 10:11:56'),(24,24,'velit',51445174,NULL,24,'1986-10-28 01:44:26','1987-05-02 20:23:11'),(25,25,'aliquid',31070,NULL,25,'2005-05-26 13:56:52','1979-12-02 02:08:04'),(26,26,'fugit',1,NULL,26,'2013-08-19 23:29:57','2004-03-19 22:57:10'),(27,27,'eum',5,NULL,27,'1989-05-23 07:08:28','1995-05-24 00:36:10'),(28,28,'pariatur',21597093,NULL,28,'1976-11-01 04:58:39','1999-11-09 08:07:09'),(29,29,'laborum',20,NULL,29,'2018-11-06 13:36:46','2000-01-17 22:01:35'),(30,30,'et',0,NULL,30,'1972-05-08 09:20:44','2012-02-24 20:26:36'),(31,31,'sed',8,NULL,31,'1979-04-04 18:56:10','1978-04-20 05:10:28'),(32,32,'esse',599379,NULL,32,'2000-12-27 06:59:05','1977-05-01 11:37:31'),(33,33,'reprehenderit',2009,NULL,33,'1973-11-19 03:55:24','1984-11-13 09:18:29'),(34,34,'eligendi',8584908,NULL,34,'1990-10-04 23:44:34','2007-06-06 21:17:54'),(35,35,'eos',703529,NULL,35,'1995-11-17 02:50:54','1991-11-26 02:30:26'),(36,36,'itaque',5686408,NULL,36,'1994-03-26 14:55:35','1982-11-06 16:57:33'),(37,37,'et',530374,NULL,37,'1977-06-01 08:55:36','1973-11-20 22:22:46'),(38,38,'consequatur',854,NULL,38,'1972-08-05 23:29:11','1982-05-09 12:28:13'),(39,39,'distinctio',6820079,NULL,39,'1989-01-20 04:50:06','1995-01-22 04:25:06'),(40,40,'est',7688,NULL,40,'1976-08-14 07:51:19','2015-05-09 04:42:07'),(41,41,'facilis',677,NULL,41,'1986-11-02 11:48:39','1988-04-13 13:00:47'),(42,42,'saepe',183550553,NULL,42,'1973-10-02 12:00:47','2012-08-20 05:45:58'),(43,43,'qui',491,NULL,43,'2010-10-06 21:31:28','2005-02-22 00:42:25'),(44,44,'nihil',20,NULL,44,'1984-08-17 18:33:30','2019-09-16 08:27:42'),(45,45,'rem',5861,NULL,45,'2014-08-20 05:05:26','1998-12-15 00:50:17'),(46,46,'magni',4574715,NULL,46,'2018-01-23 06:57:29','1970-12-24 16:53:51'),(47,47,'hic',0,NULL,47,'1991-03-15 15:44:56','2008-04-02 14:49:33'),(48,48,'vel',37003048,NULL,48,'2018-11-09 22:46:15','1971-04-30 11:45:21'),(49,49,'sit',854,NULL,49,'1981-09-02 03:37:38','1974-01-30 08:25:51'),(50,50,'non',34652,NULL,50,'1982-03-20 03:30:41','2017-08-07 22:04:53'),(51,51,'eos',206,NULL,51,'1981-12-13 18:19:40','1997-09-19 21:47:51'),(52,52,'et',36613730,NULL,52,'1991-11-24 02:51:48','1984-05-18 09:39:47'),(53,53,'nostrum',26838859,NULL,53,'2008-04-07 06:04:34','2012-07-22 01:18:58'),(54,54,'velit',1490,NULL,54,'1984-09-02 02:21:15','1993-12-19 14:39:55'),(55,55,'eligendi',97,NULL,55,'1993-03-16 12:18:49','2010-07-15 12:07:18'),(56,56,'soluta',97528750,NULL,56,'2015-08-16 06:55:39','1995-02-19 14:03:06'),(57,57,'aut',6701,NULL,57,'2019-06-28 08:02:13','1982-07-14 02:11:14'),(58,58,'fugit',34174,NULL,58,'1979-09-08 11:41:56','2002-03-24 19:22:17'),(59,59,'facere',8209,NULL,59,'1991-04-30 02:07:08','2019-12-27 13:00:04'),(60,60,'pariatur',9776,NULL,60,'1987-04-02 00:37:21','1982-01-19 07:19:49'),(61,61,'ex',87,NULL,61,'2019-05-10 12:46:53','2007-11-05 07:41:16'),(62,62,'voluptatem',8,NULL,62,'1991-05-22 02:10:06','1994-09-26 19:18:55'),(63,63,'qui',268,NULL,63,'1973-02-24 20:00:18','2003-10-16 23:16:25'),(64,64,'consequuntur',4547032,NULL,64,'1995-11-16 12:55:17','1991-07-18 12:35:03'),(65,65,'eaque',91056816,NULL,65,'1983-09-21 06:53:29','1999-01-18 20:02:37'),(66,66,'excepturi',8868204,NULL,66,'1978-04-27 06:25:18','1970-07-31 20:39:05'),(67,67,'iusto',16982,NULL,67,'2004-11-28 11:26:41','1980-03-09 17:38:37'),(68,68,'minus',7,NULL,68,'1982-01-30 07:24:28','2002-10-19 13:18:29'),(69,69,'repudiandae',77525563,NULL,69,'1988-02-28 01:13:55','1974-11-04 11:57:58'),(70,70,'quidem',730707,NULL,70,'2010-02-01 01:55:53','1976-12-10 22:11:07'),(71,71,'magni',389025458,NULL,71,'2005-07-21 09:24:17','1996-04-18 05:55:51'),(72,72,'sint',19107,NULL,72,'2012-12-26 07:11:08','2011-06-29 12:09:44'),(73,73,'ut',6772751,NULL,73,'1988-01-28 00:49:57','1995-12-14 08:01:54'),(74,74,'quis',2251525,NULL,74,'2000-11-05 18:32:51','1985-10-10 15:37:10'),(75,75,'repellat',7,NULL,75,'1984-04-28 14:29:52','1970-01-16 04:42:57'),(76,76,'perspiciatis',98,NULL,76,'2012-03-08 18:07:31','1979-01-02 16:03:05'),(77,77,'soluta',603,NULL,77,'1994-10-25 01:49:43','1983-08-02 05:24:09'),(78,78,'enim',0,NULL,78,'1995-02-15 22:33:56','2014-01-25 03:32:23'),(79,79,'rem',868436,NULL,79,'1988-05-25 22:46:08','1970-09-21 04:51:40'),(80,80,'provident',72349,NULL,80,'1992-03-29 08:47:24','1987-03-21 11:29:11'),(81,81,'consequatur',398309,NULL,81,'2000-10-08 23:35:50','1985-08-21 20:32:02'),(82,82,'sit',0,NULL,82,'2018-02-03 15:21:32','2010-04-10 19:54:15'),(83,83,'eligendi',10530280,NULL,83,'2019-06-11 08:59:26','2013-07-01 15:30:29'),(84,84,'ea',27,NULL,84,'2010-05-21 14:27:39','1979-03-23 19:08:08'),(85,85,'blanditiis',43466,NULL,85,'1981-06-15 08:19:37','1978-04-03 14:35:00'),(86,86,'qui',3366,NULL,86,'2000-07-02 03:35:18','1975-01-16 05:21:52'),(87,87,'tempore',698,NULL,87,'2013-08-19 06:30:04','1971-01-09 13:35:54'),(88,88,'est',5,NULL,88,'1987-08-26 19:11:13','1990-02-26 18:25:26'),(89,89,'natus',34,NULL,89,'1998-07-03 20:45:16','2007-03-24 00:03:02'),(90,90,'magnam',454309,NULL,90,'1977-01-15 18:43:17','2015-07-02 04:12:17'),(91,91,'enim',684,NULL,91,'2007-04-26 22:07:03','1988-05-29 00:25:59'),(92,92,'ullam',3482201,NULL,92,'2013-09-09 22:46:57','2014-10-20 21:40:14'),(93,93,'ea',81,NULL,93,'1989-09-29 08:49:17','1984-10-14 20:13:54'),(94,94,'et',5812,NULL,94,'1981-07-18 05:06:41','1974-08-22 22:12:02'),(95,95,'cum',3349,NULL,95,'1980-08-23 09:37:03','1985-01-08 07:25:08'),(96,96,'et',4814664,NULL,96,'2008-06-30 09:54:27','1978-11-15 23:06:00'),(97,97,'quas',3,NULL,97,'2003-08-05 14:34:01','1991-09-08 18:04:01'),(98,98,'iure',4767,NULL,98,'1981-12-31 04:45:49','1970-11-05 14:48:07'),(99,99,'et',2134,NULL,99,'1997-12-23 07:30:12','1973-09-16 20:37:26'),(100,100,'non',1,NULL,100,'1974-11-08 05:32:35','2007-06-30 12:11:42');
+/*!40000 ALTER TABLE `media` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2021-07-12  9:42:30
+-- MariaDB dump 10.17  Distrib 10.4.15-MariaDB, for Linux (x86_64)
+--
+-- Host: mysql.hostinger.ro    Database: u574849695_24
+-- ------------------------------------------------------
+-- Server version	10.4.15-MariaDB-cll-lve
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `media_types`
+--
+
+DROP TABLE IF EXISTS `media_types`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `media_types` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Идентификатор строки',
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'Название типа',
+  `created_at` datetime DEFAULT current_timestamp() COMMENT 'Время создания строки',
+  `updated_at` datetime DEFAULT current_timestamp() ON UPDATE current_timestamp() COMMENT 'Время обновления строки',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `name` (`name`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Типы медиафайлов';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `media_types`
+--
+
+LOCK TABLES `media_types` WRITE;
+/*!40000 ALTER TABLE `media_types` DISABLE KEYS */;
+INSERT INTO `media_types` VALUES (1,'molestiae','2004-02-09 14:44:33','1970-11-06 20:46:22'),(2,'sunt','1983-01-21 04:04:22','1973-04-26 01:45:53'),(3,'rem','1988-08-18 05:48:40','2013-03-08 21:30:26'),(4,'sed','1998-08-14 23:39:19','1970-04-02 02:58:12'),(5,'vitae','1971-07-05 11:49:14','1997-09-09 07:07:24'),(6,'explicabo','2001-11-22 02:47:06','1986-10-02 01:03:45'),(7,'similique','2014-10-10 21:18:44','1973-11-01 05:19:15'),(8,'alias','2009-09-28 08:44:44','1976-12-19 19:36:36'),(9,'odio','1984-08-02 13:14:45','1995-12-02 20:25:45'),(10,'officiis','1996-05-18 16:38:38','1997-09-05 19:28:18');
+/*!40000 ALTER TABLE `media_types` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2021-07-12  9:56:49
+-- MariaDB dump 10.17  Distrib 10.4.15-MariaDB, for Linux (x86_64)
+--
+-- Host: mysql.hostinger.ro    Database: u574849695_25
+-- ------------------------------------------------------
+-- Server version	10.4.15-MariaDB-cll-lve
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `messages`
+--
+
+DROP TABLE IF EXISTS `messages`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `messages` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Идентификатор строки',
+  `from_user_id` int(10) unsigned NOT NULL COMMENT 'Ссылка на отправителя сообщения',
+  `to_user_id` int(10) unsigned NOT NULL COMMENT 'Ссылка на получателя сообщения',
+  `body` text COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'Текст сообщения',
+  `is_important` tinyint(1) DEFAULT NULL COMMENT 'Признак важности',
+  `is_delivered` tinyint(1) DEFAULT NULL COMMENT 'Признак доставки',
+  `created_at` datetime DEFAULT current_timestamp() COMMENT 'Время создания строки',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=101 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Сообщения';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `messages`
+--
+
+LOCK TABLES `messages` WRITE;
+/*!40000 ALTER TABLE `messages` DISABLE KEYS */;
+INSERT INTO `messages` VALUES (1,1,1,'',0,1,'1981-01-28 03:30:29'),(2,2,2,'',0,1,'1977-07-20 14:04:42'),(3,3,3,'',1,1,'1995-12-23 19:14:32'),(4,4,4,'',1,0,'1971-06-29 04:42:30'),(5,5,5,'',0,1,'2018-11-10 03:50:16'),(6,6,6,'',0,0,'2015-12-05 06:32:02'),(7,7,7,'',0,0,'2013-05-19 21:56:40'),(8,8,8,'',1,0,'2002-03-25 10:56:36'),(9,9,9,'',1,0,'2014-11-29 22:06:21'),(10,10,10,'',0,1,'1980-04-23 21:08:11'),(11,11,11,'',1,0,'1998-04-14 03:57:16'),(12,12,12,'',0,1,'2004-01-07 16:27:03'),(13,13,13,'',1,1,'2010-10-02 20:23:47'),(14,14,14,'',1,1,'1976-08-31 22:33:08'),(15,15,15,'',0,1,'1996-08-11 01:11:03'),(16,16,16,'',1,1,'2011-11-28 12:58:24'),(17,17,17,'',0,0,'1981-08-26 10:41:45'),(18,18,18,'',1,1,'1997-09-28 05:02:13'),(19,19,19,'',1,1,'1996-09-21 15:07:26'),(20,20,20,'',1,0,'2008-03-09 17:32:36'),(21,21,21,'',0,1,'1984-11-14 13:42:19'),(22,22,22,'',1,1,'1998-11-17 00:57:38'),(23,23,23,'',1,0,'1994-04-05 23:13:09'),(24,24,24,'',1,0,'1997-07-12 22:02:27'),(25,25,25,'',0,1,'2021-05-27 04:23:51'),(26,26,26,'',1,0,'1979-08-03 13:04:52'),(27,27,27,'',0,1,'1990-02-06 14:12:34'),(28,28,28,'',0,0,'2009-02-03 01:09:50'),(29,29,29,'',1,0,'1996-03-21 05:41:24'),(30,30,30,'',1,0,'1974-06-17 11:08:46'),(31,31,31,'',1,1,'2002-01-31 03:13:37'),(32,32,32,'',0,1,'2018-04-12 23:32:36'),(33,33,33,'',0,1,'2003-03-26 13:59:40'),(34,34,34,'',1,1,'2000-06-12 09:07:24'),(35,35,35,'',0,1,'1992-04-02 10:17:50'),(36,36,36,'',0,0,'1980-10-09 22:46:12'),(37,37,37,'',1,0,'2001-02-02 16:43:59'),(38,38,38,'',0,1,'2007-11-20 02:00:46'),(39,39,39,'',1,1,'2007-12-09 22:30:58'),(40,40,40,'',1,1,'1991-09-01 14:49:40'),(41,41,41,'',1,0,'2012-09-26 15:03:19'),(42,42,42,'',0,1,'2012-06-12 03:35:02'),(43,43,43,'',0,0,'2017-07-20 22:49:03'),(44,44,44,'',0,0,'1976-10-30 04:16:41'),(45,45,45,'',0,1,'1992-05-30 13:42:15'),(46,46,46,'',1,1,'1976-03-12 20:30:13'),(47,47,47,'',1,0,'2019-03-08 23:13:04'),(48,48,48,'',1,1,'2000-11-10 19:46:48'),(49,49,49,'',1,0,'1989-09-26 03:16:31'),(50,50,50,'',0,1,'1971-01-13 18:14:27'),(51,51,51,'',0,0,'1992-04-09 11:09:45'),(52,52,52,'',1,1,'2009-05-29 06:56:03'),(53,53,53,'',0,1,'1971-04-06 12:58:16'),(54,54,54,'',1,1,'1980-12-06 08:16:24'),(55,55,55,'',1,1,'1994-04-10 18:19:39'),(56,56,56,'',0,0,'1982-07-18 07:32:35'),(57,57,57,'',1,1,'2012-06-08 20:47:21'),(58,58,58,'',0,0,'2021-03-03 03:56:34'),(59,59,59,'',0,1,'2003-10-08 03:03:37'),(60,60,60,'',1,0,'1981-12-30 18:37:44'),(61,61,61,'',0,1,'2010-06-08 06:43:03'),(62,62,62,'',1,1,'2009-07-01 13:37:51'),(63,63,63,'',1,1,'2016-05-09 01:15:36'),(64,64,64,'',0,1,'2002-08-18 05:32:58'),(65,65,65,'',1,0,'1973-11-22 12:18:45'),(66,66,66,'',1,1,'1973-05-14 11:18:35'),(67,67,67,'',1,1,'2005-09-23 20:54:55'),(68,68,68,'',1,0,'1987-07-24 09:58:37'),(69,69,69,'',0,0,'1982-05-10 20:17:18'),(70,70,70,'',0,1,'1991-10-13 13:19:48'),(71,71,71,'',0,1,'2019-08-22 18:14:38'),(72,72,72,'',0,1,'2020-11-09 04:40:23'),(73,73,73,'',0,1,'2003-06-17 20:39:58'),(74,74,74,'',0,0,'1996-03-25 19:13:45'),(75,75,75,'',0,0,'1985-09-19 00:12:11'),(76,76,76,'',0,1,'2005-03-08 02:52:21'),(77,77,77,'',1,1,'1988-04-15 22:20:35'),(78,78,78,'',0,0,'2017-08-06 06:52:10'),(79,79,79,'',0,1,'1981-06-09 00:01:22'),(80,80,80,'',1,1,'1982-08-15 08:31:49'),(81,81,81,'',0,1,'1981-02-16 15:16:40'),(82,82,82,'',1,1,'1980-03-19 06:15:30'),(83,83,83,'',1,0,'2009-09-02 22:46:04'),(84,84,84,'',1,1,'2009-02-09 16:59:02'),(85,85,85,'',1,1,'2012-06-02 04:11:05'),(86,86,86,'',1,0,'1975-12-14 00:48:34'),(87,87,87,'',0,1,'1979-02-13 14:44:36'),(88,88,88,'',0,1,'1990-04-29 16:09:48'),(89,89,89,'',1,1,'1977-03-04 13:41:42'),(90,90,90,'',0,1,'1979-05-10 08:03:11'),(91,91,91,'',0,1,'1975-05-19 13:49:35'),(92,92,92,'',0,1,'2012-08-19 17:35:36'),(93,93,93,'',1,0,'1994-07-18 18:07:34'),(94,94,94,'',0,1,'1977-05-17 09:27:05'),(95,95,95,'',0,1,'2016-02-29 05:46:15'),(96,96,96,'',1,1,'2014-08-06 19:10:53'),(97,97,97,'',1,0,'1975-03-16 14:34:39'),(98,98,98,'',0,0,'1998-01-12 17:02:44'),(99,99,99,'',0,0,'2006-08-03 23:41:21'),(100,100,100,'',0,1,'1982-05-01 03:04:53');
+/*!40000 ALTER TABLE `messages` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2021-07-12  9:41:38
+-- MariaDB dump 10.17  Distrib 10.4.15-MariaDB, for Linux (x86_64)
+--
+-- Host: mysql.hostinger.ro    Database: u574849695_25
+-- ------------------------------------------------------
+-- Server version	10.4.15-MariaDB-cll-lve
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `profiles`
+--
+
+DROP TABLE IF EXISTS `profiles`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `profiles` (
+  `user_id` int(10) unsigned NOT NULL COMMENT 'Ссылка на пользователя',
+  `gender` char(1) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'Пол',
+  `birthday` date DEFAULT NULL COMMENT 'Дата рождения',
+  `city_id` int(10) unsigned DEFAULT NULL COMMENT 'Ссылка на город проживания',
+  `created_at` datetime DEFAULT current_timestamp() COMMENT 'Время создания строки',
+  `updated_at` datetime DEFAULT current_timestamp() ON UPDATE current_timestamp() COMMENT 'Время обновления строки',
+  PRIMARY KEY (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Профили';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `profiles`
+--
+
+LOCK TABLES `profiles` WRITE;
+/*!40000 ALTER TABLE `profiles` DISABLE KEYS */;
+INSERT INTO `profiles` VALUES (1,'M','1971-02-18',1,'2002-02-25 02:03:42','2018-06-05 19:56:07'),(2,'D','1970-02-23',2,'1973-11-21 22:11:08','2018-12-07 05:00:13'),(3,'D','2010-09-19',3,'1991-01-09 23:35:42','1979-03-29 20:13:46'),(4,'M','2003-02-27',4,'2002-12-24 12:58:30','1977-10-03 08:30:59'),(5,'D','2009-01-17',5,'1984-05-03 19:15:14','2006-11-24 22:45:15'),(6,'M','2003-09-24',6,'1996-06-09 10:30:59','2021-07-09 02:24:39'),(7,'P','1988-12-07',7,'2019-04-17 20:03:48','1986-10-14 01:39:19'),(8,'D','2009-03-26',8,'1996-12-18 19:01:25','1979-04-27 23:53:03'),(9,'M','2020-02-21',9,'2015-01-29 03:58:57','1988-09-11 15:39:16'),(10,'D','2016-08-22',10,'1996-02-04 05:44:10','1997-01-31 14:14:40'),(11,'M','2013-02-03',11,'2009-11-27 04:23:30','1989-02-07 07:24:27'),(12,'P','1972-04-10',12,'1999-09-15 17:04:58','2021-01-11 07:47:57'),(13,'P','1982-03-30',13,'2004-06-09 20:07:04','1999-03-19 10:18:26'),(14,'P','2015-10-10',14,'2000-03-05 18:18:32','1985-10-03 21:54:40'),(15,'M','2015-10-14',15,'1982-09-02 09:17:52','2012-07-28 10:51:08'),(16,'D','1994-07-02',16,'2004-05-09 10:35:44','1972-11-17 21:17:57'),(17,'M','2019-09-01',17,'2008-06-30 01:38:24','1995-11-19 01:26:01'),(18,'P','2008-01-30',18,'2020-03-14 11:06:42','2012-02-24 09:27:41'),(19,'M','2015-03-11',19,'2008-06-19 19:46:55','1978-07-03 20:42:07'),(20,'D','1985-02-26',20,'1996-10-01 15:02:27','1983-03-11 13:55:56'),(21,'M','1995-10-28',21,'1972-07-31 14:30:28','2017-01-17 21:45:40'),(22,'D','2017-02-25',22,'2000-02-08 04:07:24','1983-10-09 17:49:31'),(23,'D','2012-08-23',23,'2017-08-20 09:51:16','1977-07-05 12:39:44'),(24,'M','1981-09-11',24,'2019-10-11 05:19:18','1981-11-02 03:08:22'),(25,'P','1998-09-14',25,'1983-04-29 15:54:05','2003-01-16 11:58:41'),(26,'M','1993-02-20',26,'1985-06-23 23:43:12','2002-07-09 15:26:06'),(27,'D','1991-04-28',27,'2012-06-09 12:23:01','1994-10-22 09:42:50'),(28,'M','2009-11-02',28,'2021-02-04 15:14:33','2016-08-30 11:49:25'),(29,'P','1976-01-02',29,'1996-09-19 18:12:45','2005-07-09 16:17:40'),(30,'M','1975-05-28',30,'2007-09-22 01:35:22','1984-05-21 20:51:23'),(31,'D','1981-07-07',31,'2017-01-08 22:49:40','1977-04-18 17:37:29'),(32,'M','1984-05-26',32,'1980-07-23 20:12:04','1985-09-13 08:29:22'),(33,'M','2014-03-28',33,'1995-01-10 18:06:38','1994-12-25 01:12:31'),(34,'M','1995-04-25',34,'1990-11-18 22:50:43','1996-02-21 21:38:59'),(35,'M','2001-04-23',35,'2003-05-28 19:12:20','1976-02-19 04:06:05'),(36,'D','2018-03-12',36,'1989-12-06 19:46:55','1975-03-08 23:17:56'),(37,'D','2020-04-02',37,'2015-06-13 11:34:52','2018-08-26 04:33:05'),(38,'D','2018-12-24',38,'1998-09-28 02:34:59','2019-06-20 07:26:35'),(39,'M','1996-05-20',39,'2011-07-28 04:07:20','1977-10-22 07:50:16'),(40,'D','2015-05-20',40,'1985-06-30 09:22:07','2008-04-08 23:11:12'),(41,'D','1997-11-12',41,'1996-02-17 05:49:39','2002-06-01 04:45:41'),(42,'P','2016-10-23',42,'1976-12-23 16:23:46','2019-04-18 18:03:49'),(43,'M','1999-10-06',43,'2013-07-25 09:27:21','2010-10-25 10:48:05'),(44,'D','1978-12-29',44,'1973-11-17 23:56:07','1991-02-17 23:50:26'),(45,'M','1997-08-14',45,'2018-04-25 20:20:21','1989-11-12 16:01:55'),(46,'M','2010-01-16',46,'2010-08-06 15:54:39','1982-07-18 11:09:22'),(47,'D','1984-12-03',47,'1981-09-30 15:30:23','1985-07-06 02:03:17'),(48,'D','1978-11-09',48,'1984-05-31 06:35:03','1972-05-02 17:29:27'),(49,'M','1980-08-02',49,'2019-01-03 00:25:07','1971-12-07 13:02:20'),(50,'P','1992-07-25',50,'2003-04-03 22:05:42','2000-03-15 18:25:20'),(51,'D','1997-07-09',51,'2007-02-28 05:20:35','1975-09-29 03:45:12'),(52,'P','1971-01-06',52,'2010-09-23 20:59:17','1974-10-27 13:25:51'),(53,'M','2003-05-05',53,'1991-07-19 04:15:06','2006-05-11 06:46:40'),(54,'M','2002-12-05',54,'1978-05-06 13:27:53','2004-01-19 13:35:50'),(55,'D','2013-07-28',55,'2000-07-01 09:28:45','1981-06-27 07:39:46'),(56,'M','2014-09-05',56,'1978-06-16 01:14:34','2012-06-10 03:11:35'),(57,'P','1995-01-08',57,'1983-11-30 00:59:54','1971-03-01 17:05:18'),(58,'M','1999-12-28',58,'1975-11-21 01:52:00','2001-01-12 05:39:27'),(59,'M','1996-02-29',59,'1971-08-19 06:31:16','1997-09-18 23:33:22'),(60,'D','1993-03-30',60,'1993-07-22 14:09:53','1979-07-29 00:09:31'),(61,'P','1970-07-04',61,'1980-07-22 12:14:03','1982-02-09 22:23:14'),(62,'P','1998-10-29',62,'2011-09-03 04:41:34','1970-03-10 19:54:25'),(63,'D','2009-07-11',63,'1971-05-06 21:03:12','2013-10-15 12:51:06'),(64,'M','2004-01-15',64,'1997-06-05 17:27:22','1973-01-02 17:55:41'),(65,'D','2016-01-17',65,'1985-08-26 13:13:36','1971-12-24 03:56:58'),(66,'M','1971-01-11',66,'1983-12-26 10:46:59','2011-04-18 13:22:50'),(67,'M','1981-09-20',67,'2012-04-11 17:24:12','1974-05-06 00:22:58'),(68,'D','1997-08-06',68,'1995-05-09 03:45:56','2011-11-06 06:05:21'),(69,'D','2020-02-09',69,'2006-12-23 18:16:38','2014-06-16 00:13:31'),(70,'P','2010-01-10',70,'2000-08-17 12:34:53','1986-09-29 13:55:35'),(71,'D','1985-06-13',71,'2002-10-22 06:45:25','2008-01-19 20:25:00'),(72,'P','1987-08-24',72,'1983-04-03 19:22:55','1991-07-03 12:29:13'),(73,'M','2016-09-19',73,'2006-08-11 18:10:47','2019-02-18 23:19:18'),(74,'P','1986-04-22',74,'2020-01-10 05:23:37','1986-07-07 05:02:44'),(75,'M','1996-02-24',75,'2005-07-12 16:21:08','2019-03-19 21:53:35'),(76,'M','2007-08-18',76,'2020-04-20 00:15:03','2013-03-14 20:49:19'),(77,'M','1970-12-09',77,'1986-06-01 11:55:39','1982-07-17 15:13:24'),(78,'M','2009-08-27',78,'2006-12-18 06:05:25','1976-04-19 06:30:20'),(79,'M','2018-02-10',79,'1979-02-05 05:40:37','2006-01-14 03:10:26'),(80,'P','1972-03-05',80,'2011-06-29 08:39:49','1991-05-02 01:00:31'),(81,'D','1986-10-23',81,'1999-03-26 08:59:45','1990-12-11 07:39:08'),(82,'M','2016-11-15',82,'1977-07-28 20:02:29','1997-01-21 13:12:35'),(83,'D','1995-04-13',83,'1971-07-14 12:01:38','2005-02-14 17:45:13'),(84,'M','1970-08-20',84,'2014-07-16 07:39:21','1977-05-08 19:55:17'),(85,'M','1975-01-18',85,'1983-07-20 05:45:16','1978-07-06 05:04:53'),(86,'P','1980-09-07',86,'2006-11-02 10:17:01','1980-06-17 10:17:35'),(87,'P','1977-12-04',87,'2007-09-12 11:26:43','1996-01-14 02:37:38'),(88,'D','2010-12-10',88,'1972-05-10 01:45:41','1972-08-10 10:39:31'),(89,'D','2000-08-11',89,'2018-11-07 19:05:01','2006-11-21 12:51:52'),(90,'M','1989-04-13',90,'1993-09-12 00:54:07','1998-07-25 09:30:47'),(91,'M','1994-04-13',91,'1978-04-07 10:28:15','1986-04-19 07:59:54'),(92,'D','2009-05-10',92,'1995-05-21 07:29:47','1979-06-18 08:43:49'),(93,'M','1984-11-26',93,'2003-09-20 23:47:47','1975-08-03 05:47:20'),(94,'M','1987-03-15',94,'2020-04-26 13:05:47','1988-09-03 04:50:49'),(95,'M','1978-08-26',95,'1988-07-03 05:38:19','2002-06-01 07:09:51'),(96,'D','1998-03-12',96,'2014-06-11 20:49:15','1970-07-13 19:31:59'),(97,'P','1996-04-27',97,'2014-05-19 08:45:13','1990-02-27 00:56:56'),(98,'D','1972-08-16',98,'1986-09-09 07:30:45','1994-08-29 06:09:46'),(99,'D','1978-02-22',99,'1983-11-02 06:48:04','1981-07-14 00:12:05'),(100,'M','1983-03-06',100,'1981-03-21 12:29:49','1971-08-16 10:41:29');
+/*!40000 ALTER TABLE `profiles` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2021-07-12  9:40:41
+-- MariaDB dump 10.17  Distrib 10.4.15-MariaDB, for Linux (x86_64)
+--
+-- Host: mysql.hostinger.ro    Database: u574849695_25
+-- ------------------------------------------------------
+-- Server version	10.4.15-MariaDB-cll-lve
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `users`
+--
+
+DROP TABLE IF EXISTS `users`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `users` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Идентификатор строки',
+  `first_name` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'Имя пользователя',
+  `last_name` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'Фамилия пользователя',
+  `email` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'Почта',
+  `phone` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'Телефон',
+  `created_at` datetime DEFAULT current_timestamp() COMMENT 'Время создания строки',
+  `updated_at` datetime DEFAULT current_timestamp() ON UPDATE current_timestamp() COMMENT 'Время обновления строки',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `email` (`email`),
+  UNIQUE KEY `phone` (`phone`)
+) ENGINE=InnoDB AUTO_INCREMENT=101 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Пользователи';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `users`
+--
+
+LOCK TABLES `users` WRITE;
+/*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` VALUES (1,'Citlalli','Greenholt','renner.alphonso@example.net','07757343014','1998-09-13 16:32:56','1980-10-13 14:17:47'),(2,'Baylee','Nader','rhettinger@example.org','1-121-399-8173','2003-03-31 07:28:09','1982-04-19 03:21:30'),(3,'Kaylah','Runolfsson','gus.swift@example.org','631-996-6643','1980-12-10 16:29:02','2005-01-13 06:00:13'),(4,'Carmine','Fay','adelia85@example.org','1-991-740-1813','1970-07-25 07:56:07','2007-02-10 02:12:52'),(5,'Wilmer','Morar','pollich.ellis@example.org','1-950-220-2665','1990-06-27 19:10:59','1987-03-23 06:21:26'),(6,'Bethel','Dicki','hahn.hettie@example.net','463.935.4526x053','1985-10-12 15:57:03','1977-10-19 02:11:22'),(7,'Ray','Pfeffer','dane96@example.com','258-667-2907','2016-02-13 20:20:17','1983-02-03 01:44:26'),(8,'Abigale','Tremblay','lon03@example.net','551-966-4092','1993-12-25 16:40:52','2010-10-11 04:30:48'),(9,'Hal','Ledner','lawrence07@example.net','077-434-9663','1975-10-01 07:28:53','2013-10-29 18:51:27'),(10,'Shirley','Oberbrunner','hodkiewicz.rebeca@example.com','00180204372','1977-07-31 09:57:52','2007-02-26 03:22:11'),(11,'Claude','Blick','jspencer@example.org','1-249-580-8810x7458','1973-11-10 02:26:41','1987-04-24 08:20:12'),(12,'Malcolm','Gerhold','ulind@example.org','05016523397','1983-01-11 05:16:17','1983-01-18 05:47:05'),(13,'Meta','Lehner','corwin.jerrold@example.org','+78(0)4424517416','2011-11-30 05:36:03','1985-01-08 18:10:37'),(14,'Keyon','Reilly','gregorio57@example.net','689.123.8276','1989-05-08 22:10:29','1999-10-03 17:58:43'),(15,'Aileen','Abbott','reinger.will@example.com','00826002773','1972-08-10 03:55:33','2018-02-24 15:24:55'),(16,'Willy','Ortiz','kayla.maggio@example.net','(982)472-4680x102','1983-11-23 12:15:53','2005-06-26 05:21:01'),(17,'Hillary','Gutkowski','emante@example.net','(200)572-0430','1979-02-12 21:33:48','1998-02-28 12:38:37'),(18,'Bettye','Rippin','lilyan74@example.net','(632)586-5711x7521','1975-08-07 00:36:45','1990-05-01 04:09:16'),(19,'Shemar','Willms','gerhold.adonis@example.org','095-975-4563x127','1995-01-31 16:59:39','1973-09-20 03:19:07'),(20,'Caitlyn','Prosacco','christelle51@example.org','251.726.5719','1976-12-31 18:16:35','1992-06-17 21:33:08'),(21,'Emma','Walter','nicole21@example.com','432-075-8327x20941','1999-04-24 03:44:50','2004-01-29 03:27:00'),(22,'Kirk','Upton','mgoyette@example.org','1-579-526-7150x0931','2017-03-02 00:08:12','2006-06-21 04:27:34'),(23,'Austyn','Paucek','to\'conner@example.com','1-531-298-2919x055','2007-08-13 13:14:52','1986-04-17 21:46:26'),(24,'Laura','Corkery','jacey.ruecker@example.com','169-336-2951','2020-10-11 13:33:55','2000-06-19 15:41:57'),(25,'Buford','Batz','jacobson.odie@example.org','820-246-9093','1986-11-02 21:43:47','1977-01-20 10:54:46'),(26,'Kristofer','Kirlin','lemke.kole@example.com','09329406301','1971-10-01 00:35:11','2012-03-31 02:25:30'),(27,'Velda','Schaden','leannon.everett@example.org','135-452-4996x348','1988-08-13 03:20:59','1973-12-29 22:04:11'),(28,'Lora','Ruecker','mayer.erin@example.com','437.072.1214x392','1977-10-25 23:23:10','2000-02-26 13:24:09'),(29,'Kevon','Ondricka','larkin.ubaldo@example.com','(051)657-5975x6434','1997-06-16 19:29:23','1994-10-18 18:13:54'),(30,'Hillary','O\'Kon','o\'connell.alan@example.com','1-466-065-3058x070','1976-01-12 00:56:19','2008-11-20 07:26:25'),(31,'Barrett','Will','maggie45@example.org','(323)928-6940x68695','2001-11-08 23:22:30','2006-01-12 01:28:45'),(32,'Raphaelle','McLaughlin','nitzsche.jasen@example.net','680-065-6947','2013-02-26 03:35:22','2007-02-12 21:44:14'),(33,'Annabell','Streich','orogahn@example.net','836.362.4300x21282','2000-06-19 19:53:46','1990-03-06 11:05:02'),(34,'Solon','Hermann','hdubuque@example.net','056-658-4837x190','2002-12-20 01:30:44','2013-04-16 03:30:57'),(35,'Meggie','Stamm','aaliyah.will@example.com','480-234-1606x55130','1995-01-03 21:27:36','2007-06-03 17:09:07'),(36,'Kenton','Ebert','bradford.thompson@example.org','1-573-422-5039x812','1973-04-01 02:37:42','2004-12-20 02:18:25'),(37,'Tate','Kling','stiedemann.jason@example.net','04281048215','1980-05-14 22:53:42','1973-01-08 18:23:14'),(38,'Esta','Jast','krajcik.earlene@example.com','(425)104-6205x84670','1995-10-04 12:35:57','2007-12-30 08:51:15'),(39,'Paolo','Balistreri','margarita.dietrich@example.net','1-948-283-6046x9163','2014-10-02 03:04:43','1976-10-28 20:10:28'),(40,'Melody','Medhurst','tfadel@example.net','200.591.1468','1972-10-25 09:02:47','1985-09-20 07:26:23'),(41,'Marlon','Osinski','melisa.mayert@example.com','(605)263-3794','2008-06-17 19:02:03','1981-06-11 16:58:55'),(42,'Sedrick','McKenzie','benedict.walter@example.org','060-659-3455x928','2010-07-13 03:34:43','1994-06-19 01:59:36'),(43,'Jazlyn','Brown','aileen64@example.com','1-867-840-5835','1984-10-16 20:24:00','1978-05-11 18:50:59'),(44,'Joaquin','Goodwin','benjamin15@example.com','1-223-966-7256','2013-11-13 05:27:53','1988-10-20 08:27:39'),(45,'Alvina','Eichmann','glebsack@example.net','+58(8)9534080040','1975-05-06 12:17:41','1977-11-10 07:59:38'),(46,'Lina','Willms','genesis54@example.net','429-102-9271x157','1976-11-02 19:56:39','2010-04-25 11:17:28'),(47,'Eulalia','Senger','kamren91@example.net','+54(4)1226429363','1976-09-09 03:56:35','2014-01-28 19:51:26'),(48,'Andrew','Rice','mohammad.connelly@example.org','(198)248-2106x494','2005-11-24 19:34:32','1991-02-01 04:37:30'),(49,'Susan','Morar','towne.filiberto@example.net','115-743-2143x798','2014-11-21 03:09:02','2012-03-29 15:57:48'),(50,'Fae','Beatty','steve.ankunding@example.net','041-218-2470x984','1990-07-19 06:16:50','1983-03-15 06:26:57'),(51,'Lon','Haag','kaitlyn.mcclure@example.com','631-741-1752','1972-04-10 00:22:07','1988-05-17 15:25:33'),(52,'Samara','Blanda','margot.thompson@example.net','1-820-060-0959x1253','2018-09-23 00:05:33','1971-09-07 06:23:51'),(53,'Clementine','Dicki','giovanna11@example.net','1-986-300-3747','2008-09-09 14:38:39','2017-10-11 15:52:58'),(54,'Raul','Doyle','vgoldner@example.org','958.220.1487x67810','1995-11-11 06:47:13','2010-04-04 20:58:56'),(55,'Garfield','O\'Kon','beahan.cameron@example.net','1-344-973-1642','2001-12-13 02:05:47','2000-04-02 07:33:23'),(56,'Pete','Leffler','langworth.thad@example.com','970.002.0143x220','1995-10-05 20:59:54','1978-07-14 23:10:49'),(57,'Columbus','Toy','elian.metz@example.net','1-102-732-0324x1504','2003-08-02 08:37:37','2015-02-07 17:08:27'),(58,'Elyse','Padberg','rossie.moen@example.com','237.212.6447','1991-11-29 05:37:35','2013-11-02 21:54:00'),(59,'Rolando','Stracke','vdaniel@example.com','142-708-4078','1983-11-27 22:14:59','1978-02-26 16:27:34'),(60,'Abigail','Carroll','cruickshank.clarissa@example.org','(286)101-5479x064','1994-05-31 11:27:37','1971-10-14 23:03:08'),(61,'Norwood','Turcotte','funk.golden@example.com','1-534-185-4074','2001-01-26 12:50:54','1978-07-31 22:58:34'),(62,'Justyn','Klocko','okshlerin@example.com','(010)027-2268x27860','1972-09-10 12:24:49','2008-12-20 18:22:48'),(63,'Eleanora','Bailey','isidro.farrell@example.com','(429)836-7842x873','1974-07-15 18:13:56','1998-12-16 16:26:12'),(64,'Clair','Marks','elda.schaefer@example.org','01236211959','2014-05-02 10:07:52','1978-09-23 08:15:04'),(65,'Iliana','O\'Hara','nyasia76@example.com','(244)756-9185x108','1970-12-16 05:42:43','2014-09-16 04:35:55'),(66,'Bryce','Smith','padberg.allison@example.org','1-956-379-0407','2004-04-03 22:29:42','2016-05-14 09:39:48'),(67,'Rebekah','Kertzmann','deondre.carroll@example.org','(315)681-0058x64966','1983-12-24 02:54:32','1999-09-11 13:33:31'),(68,'Nayeli','Littel','america19@example.org','945-251-2041x029','1995-09-30 02:48:10','1995-02-25 20:45:00'),(69,'Andres','Howell','urobel@example.com','00667030280','2002-01-17 05:43:09','1999-06-26 22:39:05'),(70,'Sterling','Crist','schimmel.audie@example.org','1-947-153-9088x287','1972-01-04 18:22:59','1995-03-09 19:12:18'),(71,'Sandy','Berge','ereynolds@example.com','(452)028-5814x328','2009-04-22 15:37:55','1993-10-12 18:19:14'),(72,'Kole','O\'Keefe','aimee00@example.com','001.812.3949x08171','1995-11-08 13:06:01','2008-09-08 11:27:03'),(73,'Lolita','Williamson','qkris@example.net','+21(4)2394140366','2011-11-07 11:45:20','2011-01-11 09:33:16'),(74,'Orrin','Buckridge','kip24@example.net','1-777-876-1863x363','1997-12-18 13:52:13','1992-09-07 19:50:38'),(75,'Patrick','Altenwerth','jakayla52@example.org','1-238-653-5778','1997-02-09 18:25:04','1980-01-23 15:49:20'),(76,'Paolo','Gusikowski','rlarson@example.net','(564)458-1182x6715','2016-06-26 05:04:34','1985-04-10 08:11:04'),(77,'Krystel','Gulgowski','king.bradly@example.org','01949091690','1989-06-25 09:23:01','1972-03-28 22:24:24'),(78,'Dedric','Satterfield','krajcik.sherman@example.com','04450965974','2004-03-21 22:03:54','1976-11-19 23:12:55'),(79,'Macie','Goodwin','brekke.laurianne@example.org','01378593123','1989-07-12 20:39:05','1981-05-30 08:35:54'),(80,'Donny','Larson','shields.davon@example.com','1-315-928-3293x375','2020-06-23 01:49:17','1977-05-27 17:53:20'),(81,'Arno','Purdy','tcrooks@example.net','883.389.5964x2945','1990-09-03 04:54:48','1996-01-24 08:06:55'),(82,'Ellsworth','Cummings','ruthie01@example.net','974.908.8348x079','1984-08-02 08:35:15','2018-06-11 19:28:06'),(83,'Lia','Kilback','camryn85@example.com','438-699-1765','2009-03-23 14:43:05','2015-10-10 21:26:18'),(84,'Glennie','Pollich','keeley92@example.net','193-915-1284x388','2007-09-06 14:58:05','1979-07-04 08:23:42'),(85,'Daphney','Cassin','brenda79@example.com','1-976-092-1693x588','1996-01-18 20:12:14','2013-11-23 23:12:48'),(86,'Raheem','Franecki','little.ada@example.org','141-400-3942x70009','1987-06-29 19:44:01','2007-09-28 07:49:49'),(87,'Donato','Gusikowski','pwilliamson@example.net','(518)874-3079x6596','2003-12-22 17:22:42','1979-03-08 20:34:01'),(88,'Rebecca','Doyle','keshaun11@example.com','409-212-3896','1988-01-22 08:11:56','1970-04-10 01:43:35'),(89,'Nia','Stark','hahn.levi@example.org','(458)267-4663x98580','2010-08-11 02:37:05','1989-06-17 06:17:45'),(90,'Zachery','Lind','hadley79@example.com','+69(7)4143660413','2002-12-25 14:59:53','2000-06-04 07:13:43'),(91,'Houston','Turcotte','mraz.emmanuelle@example.com','(563)350-0445','1992-09-02 22:11:15','1979-11-06 05:09:48'),(92,'Idell','Graham','pedro.pouros@example.com','02262379936','1974-11-01 02:33:10','2005-06-14 11:12:51'),(93,'Kendra','Streich','fparker@example.net','(178)634-9163x903','1987-12-04 13:48:46','2013-12-15 16:23:45'),(94,'Johnnie','Legros','ncummerata@example.net','(515)424-0494','1997-07-24 23:13:26','1970-01-03 21:45:42'),(95,'Estefania','Bosco','lemke.gerhard@example.net','197-465-1606x4634','2002-11-24 01:03:30','2007-07-09 17:16:40'),(96,'Janae','Kautzer','mabelle.mclaughlin@example.net','1-862-433-1614','1990-02-21 14:18:47','1984-06-26 20:03:08'),(97,'Jay','Koepp','okuneva.josue@example.com','(845)597-2351','1994-11-27 19:13:14','1972-01-11 04:23:49'),(98,'Koby','Windler','brooks90@example.com','850-591-6952x63073','1979-02-24 12:41:56','1983-03-13 13:07:58'),(99,'Halie','Predovic','lebsack.dominic@example.com','334-514-0054','1975-02-21 20:20:31','1997-10-01 08:56:44'),(100,'Jessie','Bednar','dimitri.dooley@example.org','06208386116','1971-09-05 23:37:08','1974-08-09 14:07:37');
+/*!40000 ALTER TABLE `users` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2021-07-12  9:36:12
+
